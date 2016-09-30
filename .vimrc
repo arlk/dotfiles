@@ -80,9 +80,7 @@ syntax enable
 
 " [gruvbox_]
 let g:gruvbox_italic=1
-autocmd FileType * set background=dark
-autocmd FileType plaintex,tex,latex set background=light
-autocmd FileType markdown set background=light
+set background=dark
 colorscheme gruvbox
 " }}}
 
