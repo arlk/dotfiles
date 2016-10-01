@@ -80,10 +80,8 @@ syntax enable
 
 " [gruvbox_]
 let g:gruvbox_italic=1
-autocmd FileType * set background=dark
-autocmd FileType plaintex,tex,latex set background=light
-autocmd FileType markdown set background=light
 colorscheme gruvbox
+set background=dark
 " }}}
 
 " File Settings {{{
@@ -131,7 +129,6 @@ set vb
 " Wildmenu {{{
 " Vim filename completion
 set wildmenu
-set wildmode=longest:full
 set wildignorecase
 
 " Vim ignores these filetypes
