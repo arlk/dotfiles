@@ -70,6 +70,11 @@ Plugin 'ervandew/supertab'
 " https://github.com/morhetz/gruvbox
 Plugin 'morhetz/gruvbox'
 
+" [ack_]
+" Plugin to search files recursively using ack
+" https://github.com/mileszs/ack.vim
+Plugin 'mileszs/ack.vim'
+
 " }}}
 
 " Vundle End {{{
@@ -110,10 +115,10 @@ autocmd BufWritePre * :%s/\s\+$//e
 " }}}
 
 " Tabs and Spaces {{{
-set tabstop=4
-set softtabstop=4
+set tabstop=2
+set softtabstop=2
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 " }}}
 
 " Vim Appearance and other settings {{{
