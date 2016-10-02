@@ -41,27 +41,33 @@ Plugin 'airblade/vim-gitgutter'
 
 " [airline_]
 " Plugin to create the header and footer bar + many more
+" https://github.com/vim-airline/vim-airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 " [nerdcommenter_]
 " Plugin with keybindings for rapid commenting
+" https://github.com/scrooloose/nerdcommenter
 Plugin 'scrooloose/nerdcommenter'
 
 " [ctrlp_]
 " Plugin for fuzzy file search
+" https://github.com/kien/ctrlp.vim
 Plugin 'kien/ctrlp.vim'
 
 " [bufferline_]
 " Plugin to list the buffers in vim
+" https://github.com/bling/vim-bufferline
 Plugin 'bling/vim-bufferline'
 
 " [supertab_]
 " Plugin to for tab completing in insert mode
+" https://github.com/ervandew/supertab
 Plugin 'ervandew/supertab'
 
 " [gruvbox_]
 " Plugin for the color scheme
+" https://github.com/morhetz/gruvbox
 Plugin 'morhetz/gruvbox'
 
 " }}}
