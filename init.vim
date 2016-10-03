@@ -20,11 +20,6 @@ Plug 'mileszs/ack.vim'
 " https://github.com/bling/vim-bufferline
 Plug 'bling/vim-bufferline'
 
-" [ctrlp_]
-" Plugin for fuzzy file search
-" https://github.com/kien/ctrlp.vim
-Plug 'kien/ctrlp.vim'
-
 " [fugitive_]
 " Plugin for commiting directly from vim
 " https://github.com/tpope/vim-fugitive
