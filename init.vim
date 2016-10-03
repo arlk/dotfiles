@@ -15,11 +15,6 @@ call plug#begin('~/.vim/plugged')
 " https://github.com/mileszs/ack.vim
 Plug 'mileszs/ack.vim'
 
-" [auctex_]
-" Plugin for latex macros
-" http://www.vim.org/scripts/script.php?script_id=162
-Plug 'auctex.vim'
-
 " [bufferline_]
 " Plugin to list the buffers in vim
 " https://github.com/bling/vim-bufferline
@@ -45,10 +40,10 @@ Plug 'airblade/vim-gitgutter'
 " https://github.com/morhetz/gruvbox
 Plug 'morhetz/gruvbox'
 
-" [latex_box_]
+" [tex_]
 " Plugin for latex compilation
-" https://github.com/LaTeX-Box-Team/LaTeX-Box
-Plug 'LaTeX-Box-Team/LaTeX-Box'
+" https://github.com/lervag/vimtex
+Plug 'lervag/vimtex'
 
 " [lightline_]
 " Plugin for footer colorizer
