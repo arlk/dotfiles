@@ -5,13 +5,6 @@
     git clone https://github.com/arunlakshmanan/.vim.git
     cd .vim
     ```
-
-1. Initialize the submodules:
-    ```bash
-    git submodule init
-    git submodule update
-    ```
-
 1. Create the symlinks:
     ```bash
     ./createSymLink.sh
@@ -25,8 +18,10 @@
 1. Open the vimrc and install the plugins:
     ```
     vim .vimrc
-    :PluginInstall
+    :PlugInstall
     ```
+1. You can also use this with
+   [nvim](https://github.com/neovim/neovim/wiki/Installing-Neovim).
 
 ### Misc
 * Use [instant markdown preview](https://github.com/suan/vim-instant-markdown)
