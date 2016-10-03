@@ -13,7 +13,6 @@ Plugin 'VundleVim/Vundle.vim'
 " }}}
 
 " Vundle Packages {{{
-
 " [ack_]
 " Plugin to search files recursively using ack
 " https://github.com/mileszs/ack.vim
