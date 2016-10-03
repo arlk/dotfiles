@@ -166,6 +166,7 @@ set laststatus=2
 " }}}
 
 " [ctrp_] {{{
+" Switch what <cr> in ctrp results box does
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
@@ -178,7 +179,7 @@ colorscheme gruvbox
 set background=dark
 " }}}
 
-" [nerd_] {{{
+" [nerdcommenter_] {{{
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
 
