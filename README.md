@@ -3,7 +3,9 @@
 1. Install nvim
    [nvim](https://github.com/neovim/neovim/wiki/Installing-Neovim).
 
-1. This setup requires [fzf](https://github.com/junegunn/fzf#installation).
+1. This setup requires:
+    1. [fzf](https://github.com/junegunn/fzf#installation).
+    2. [ag](https://github.com/ggreer/the_silver_searcher).
 
 1. Clone the repository in your home directory:
 
