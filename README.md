@@ -1,7 +1,8 @@
 # Steps to set up my vimrc (Only Linux)
 
-1. Clone the repository:
+1. Clone the repository in your home directory:
     ```bash
+    cd
     git clone https://github.com/arunlakshmanan/.vim.git
     cd .vim
     ```
@@ -24,7 +25,13 @@
     :PlugInstall
     ```
 1. You can also use this with
-   [nvim](https://github.com/neovim/neovim/wiki/Installing-Neovim).
+   [nvim](https://github.com/neovim/neovim/wiki/Installing-Neovim):
+    1. Install nvim using the instructions above
+    1. Link the `.vim` folder to `nvim`:
+      ```
+      mkdir -p ~/.config
+      ln -s ~/.vim ~/.config/nvim
+      ```
 
 ### Misc
 * Use [instant markdown preview](https://github.com/suan/vim-instant-markdown)
