@@ -171,11 +171,16 @@ source $HOME/catkin_ws/devel/setup.bash
 # }}}
 
 # Misc environ vars {{{
+# For matlab
+export PATH=$PATH:/usr/local/MATLAB/R2016a/bin
+# }}}
+
+# Sourcing files {{{
+# For fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 # Autocomplete for fab
 source $HOME/git_projs/fabric-completion/fabric-completion.bash
 
-# For matlab
-export PATH=$PATH:/usr/local/MATLAB/R2016a/bin
 # }}}
 
 # vim:foldmethod=marker:foldlevel=0
