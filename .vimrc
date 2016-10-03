@@ -15,12 +15,6 @@ call plug#begin('~/.vim/plugged')
 " https://github.com/mileszs/ack.vim
 Plug 'mileszs/ack.vim'
 
-" [airline_]
-" Plugin to create the header and footer bar + many more
-" https://github.com/vim-airline/vim-airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
 " [auctex_]
 " Plugin for latex macros
 " http://www.vim.org/scripts/script.php?script_id=162
@@ -56,6 +50,11 @@ Plug 'morhetz/gruvbox'
 " https://github.com/LaTeX-Box-Team/LaTeX-Box
 Plug 'LaTeX-Box-Team/LaTeX-Box'
 
+" [lightline_]
+" Plugin for footer colorizer
+" https://github.com/itchyny/lightline.vim
+Plug 'itchyny/lightline.vim'
+
 " [nerdcommenter_]
 " Plugin with keybindings for rapid commenting
 " https://github.com/scrooloose/nerdcommenter
@@ -87,6 +86,7 @@ syntax enable
 " File Settings {{{
 " File encoding
 set encoding=utf-8
+scriptencoding utf-8
 
 " Move backups to /tmp folder"
 set backup
@@ -154,13 +154,6 @@ nnoremap <space> za
 set foldmethod=indent
 " }}}
 
-" [airline_] {{{
-let g:airline_powerline_fonts =1
-let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
-set laststatus=2
-" }}}
-
 " [ctrp_] {{{
 " Switch what <cr> in ctrp results box does
 let g:ctrlp_prompt_mappings = {
@@ -173,6 +166,18 @@ let g:ctrlp_prompt_mappings = {
 let g:gruvbox_italic=1
 colorscheme gruvbox
 set background=dark
+" }}}
+
+" [lightline_] {{{
+let g:lightline = {
+      \ 'colorscheme': 'gruvbox',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"x":""}',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '|', 'right': '|' }
+      \ }
+set laststatus=2
 " }}}
 
 " [nerdcommenter_] {{{

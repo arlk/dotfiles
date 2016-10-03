@@ -15,13 +15,6 @@
     ```bash
     ./createSymLink.sh
     ```
-
-1. Download the patched fonts:
-
-    ```bash
-    ./createFonts.sh
-    ```
-
 1. Open the vimrc and install the plugins:
 
     ```
