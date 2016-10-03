@@ -25,6 +25,12 @@ Plug 'bling/vim-bufferline'
 " https://github.com/tpope/vim-fugitive
 Plug 'tpope/vim-fugitive'
 
+" [fzf_]
+" Plugin for fuzzy file finding
+" https://github.com/junegunn/fzf
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 " [gitgutter_]
 " Plugin to show git diffs in a gutter
 " https://github.com/airblade/vim-gitgutter
@@ -145,14 +151,6 @@ set foldlevelstart=10
 set foldnestmax=10
 nnoremap <space> za
 set foldmethod=indent
-" }}}
-
-" [ctrp_] {{{
-" Switch what <cr> in ctrp results box does
-let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("e")': ['<c-t>'],
-    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-    \ }
 " }}}
 
 " [gruvbox_] {{{
