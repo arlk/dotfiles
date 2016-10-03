@@ -5,6 +5,9 @@
     git clone https://github.com/arunlakshmanan/.vim.git
     cd .vim
     ```
+
+1. Install [vim-plug](https://github.com/junegunn/vim-plug)
+
 1. Create the symlinks:
     ```bash
     ./createSymLink.sh
