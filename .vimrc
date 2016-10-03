@@ -101,9 +101,6 @@ set writebackup
 
 " Remove whitespace automatically
 autocmd BufWritePre * :%s/\s\+$//e
-
-" Always show status line
-set laststatus=2
 " }}}
 
 " Tabs and Spaces {{{
@@ -127,6 +124,9 @@ set showmatch
 
 " Disable bell "
 set vb
+
+" Always show status line
+set laststatus=2
 " }}}
 
 " Wildmenu {{{
