@@ -167,6 +167,13 @@ let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 " }}}
 
+" [ctrp_] {{{
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
+" }}}
+
 " Keybindings {{{
 " Esc remapping
 inoremap jj <esc>
@@ -176,6 +183,8 @@ nnoremap gV `[v`]
 set pastetoggle=<F2>
 " Open a buffer in new tab
 nnoremap <leader>t :tabnew
+" Open file under cursor in a new tab
+nnoremap gf <c-w>gf
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
