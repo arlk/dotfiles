@@ -1,6 +1,7 @@
 # Vundle files
-bundle/
 after/
+autoload/
+plugged/
 
 # Temp files
 *~

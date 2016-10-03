@@ -1,84 +1,80 @@
 " Arun Lakshmanan
 
-" Vundle Setup {{{
+" Vimrc begin {{{
 set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-
+filetype plugin indent on    " required
 " }}}
 
-" Vundle Packages {{{
+" Plug Initialize {{{
+call plug#begin('~/.vim/plugged')
+" }}}
+
+" Plug Packages {{{
 " [ack_]
 " Plugin to search files recursively using ack
 " https://github.com/mileszs/ack.vim
-Plugin 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 
 " [airline_]
 " Plugin to create the header and footer bar + many more
 " https://github.com/vim-airline/vim-airline
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " [auctex_]
 " Plugin for latex macros
 " http://www.vim.org/scripts/script.php?script_id=162
-Plugin 'auctex.vim'
+Plug 'auctex.vim'
 
 " [bufferline_]
 " Plugin to list the buffers in vim
 " https://github.com/bling/vim-bufferline
-Plugin 'bling/vim-bufferline'
+Plug 'bling/vim-bufferline'
 
 " [ctrlp_]
 " Plugin for fuzzy file search
 " https://github.com/kien/ctrlp.vim
-Plugin 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 
 " [fugitive_]
 " Plugin for commiting directly from vim
 " https://github.com/tpope/vim-fugitive
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
 " [gitgutter_]
 " Plugin to show git diffs in a gutter
 " https://github.com/airblade/vim-gitgutter
-Plugin 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 
 " [gruvbox_]
 " Plugin for the color scheme
 " https://github.com/morhetz/gruvbox
-Plugin 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 
 " [latex_box_]
 " Plugin for latex compilation
 " https://github.com/LaTeX-Box-Team/LaTeX-Box
-Plugin 'LaTeX-Box-Team/LaTeX-Box'
+Plug 'LaTeX-Box-Team/LaTeX-Box'
 
 " [nerdcommenter_]
 " Plugin with keybindings for rapid commenting
 " https://github.com/scrooloose/nerdcommenter
-Plugin 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 
 " [startify_]
 " Plugin for a fancy startup screen
 " https://github.com/mhinz/vim-startify
-Plugin 'mhinz/vim-startify'
+Plug 'mhinz/vim-startify'
 
 " [supertab_]
 " Plugin to for tab completing in insert mode
 " https://github.com/ervandew/supertab
-Plugin 'ervandew/supertab'
+Plug 'ervandew/supertab'
 " }}}
 
-" Vundle End {{{
+" Plug End {{{
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()            " required
 " }}}
 
 " Colors {{{
