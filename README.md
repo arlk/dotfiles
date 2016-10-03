@@ -28,10 +28,10 @@
    [nvim](https://github.com/neovim/neovim/wiki/Installing-Neovim):
     1. Install nvim using the instructions above
     1. Link the `.vim` folder to `nvim`:
-      ```
-      mkdir -p ~/.config
-      ln -s ~/.vim ~/.config/nvim
-      ```
+        ```
+        mkdir -p ~/.config
+        ln -s ~/.vim ~/.config/nvim
+        ```
 
 ### Misc
 * Use [instant markdown preview](https://github.com/suan/vim-instant-markdown)
