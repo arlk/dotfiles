@@ -19,11 +19,6 @@ Plugin 'VundleVim/Vundle.vim'
 " https://github.com/tpope/vim-fugitive
 Plugin 'tpope/vim-fugitive'
 
-" [nerdtree_]
-" Plugin for file tree
-" https://github.com/scrooloose/nerdtree
-Plugin 'scrooloose/nerdtree.git'
-
 " [latex_box_]
 " Plugin for latex compilation
 " https://github.com/LaTeX-Box-Team/LaTeX-Box
@@ -163,12 +158,6 @@ set foldlevelstart=10
 set foldnestmax=10
 nnoremap <space> za
 set foldmethod=indent
-" }}}
-
-" [nerdtree_] {{{
-" Auto start nerdtree if no files are specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " }}}
 
 " [airline_] {{{
