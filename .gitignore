@@ -1,0 +1,8 @@
+# Vundle files
+bundle/
+after/
+
+# Temp files
+*~
+*.swo
+*.swp
