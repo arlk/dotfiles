@@ -1,35 +1,29 @@
-# Steps to set up my vimrc (Only Linux)
+# Steps to set up init.vim, bashrc, gitconfig (requires neovim + Linux)
+
+1. You can also use this with
+   [nvim](https://github.com/neovim/neovim/wiki/Installing-Neovim):
 
 1. Clone the repository in your home directory:
 
     ```bash
-    cd
-    git clone https://github.com/arunlakshmanan/.vim.git
-    cd .vim
+    mkdir -p ~/.config
+    git clone https://github.com/arunlakshmanan/nvim.git
+    cd .config/nvim
     ```
 
 1. Install [vim-plug](https://github.com/junegunn/vim-plug)
 
-1. Create the symlinks:
+1. Create the symlinks for bashrc and gitconfig:
 
     ```bash
     ./createSymLink.sh
     ```
-1. Open the vimrc and install the plugins:
+1. Open the init.vim and install the plugins:
 
     ```
-    vim .vimrc
+    nvim init.vim
     :PlugInstall
     ```
-1. You can also use this with
-   [nvim](https://github.com/neovim/neovim/wiki/Installing-Neovim):
-    1. Install nvim using the instructions above
-    1. Link the `.vim` folder to `nvim`:
-
-        ```
-        mkdir -p ~/.config
-        ln -s ~/.vim ~/.config/nvim
-        ```
 
 ### Misc
 * Use [instant markdown preview](https://github.com/suan/vim-instant-markdown)

@@ -1,6 +1,6 @@
 " Arun Lakshmanan
 
-" Vimrc begin {{{
+" Nvim begin {{{
 set nocompatible              " be iMproved, required
 filetype plugin indent on    " required
 " }}}
