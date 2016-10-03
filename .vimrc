@@ -70,6 +70,10 @@ Plugin 'morhetz/gruvbox'
 " https://github.com/mileszs/ack.vim
 Plugin 'mileszs/ack.vim'
 
+" [startify_]
+" Plugin for a fancy startup screen
+" https://github.com/mhinz/vim-startify
+Plugin 'mhinz/vim-startify'
 " }}}
 
 " Vundle End {{{
