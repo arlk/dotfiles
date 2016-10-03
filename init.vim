@@ -234,6 +234,12 @@ let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
 " }}}
 
+" [startify_] {{{
+let g:startify_bookmarks = [
+                      \ '~/.config/nvim/init.vim'
+                      \ ]
+" }}}
+
 " Keybindings {{{
 " Esc remapping
 inoremap jj <esc>
