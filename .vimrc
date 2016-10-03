@@ -14,25 +14,10 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Vundle Packages {{{
 
-" [fugitive_]
-" Plugin for commiting directly from vim
-" https://github.com/tpope/vim-fugitive
-Plugin 'tpope/vim-fugitive'
-
-" [latex_box_]
-" Plugin for latex compilation
-" https://github.com/LaTeX-Box-Team/LaTeX-Box
-Plugin 'LaTeX-Box-Team/LaTeX-Box'
-
-" [auctex_]
-" Plugin for latex macros
-" http://www.vim.org/scripts/script.php?script_id=162
-Plugin 'auctex.vim'
-
-" [gitgutter_]
-" Plugin to show git diffs in a gutter
-" https://github.com/airblade/vim-gitgutter
-Plugin 'airblade/vim-gitgutter'
+" [ack_]
+" Plugin to search files recursively using ack
+" https://github.com/mileszs/ack.vim
+Plugin 'mileszs/ack.vim'
 
 " [airline_]
 " Plugin to create the header and footer bar + many more
@@ -40,40 +25,55 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-" [nerdcommenter_]
-" Plugin with keybindings for rapid commenting
-" https://github.com/scrooloose/nerdcommenter
-Plugin 'scrooloose/nerdcommenter'
-
-" [ctrlp_]
-" Plugin for fuzzy file search
-" https://github.com/kien/ctrlp.vim
-Plugin 'kien/ctrlp.vim'
+" [auctex_]
+" Plugin for latex macros
+" http://www.vim.org/scripts/script.php?script_id=162
+Plugin 'auctex.vim'
 
 " [bufferline_]
 " Plugin to list the buffers in vim
 " https://github.com/bling/vim-bufferline
 Plugin 'bling/vim-bufferline'
 
-" [supertab_]
-" Plugin to for tab completing in insert mode
-" https://github.com/ervandew/supertab
-Plugin 'ervandew/supertab'
+" [ctrlp_]
+" Plugin for fuzzy file search
+" https://github.com/kien/ctrlp.vim
+Plugin 'kien/ctrlp.vim'
+
+" [fugitive_]
+" Plugin for commiting directly from vim
+" https://github.com/tpope/vim-fugitive
+Plugin 'tpope/vim-fugitive'
+
+" [gitgutter_]
+" Plugin to show git diffs in a gutter
+" https://github.com/airblade/vim-gitgutter
+Plugin 'airblade/vim-gitgutter'
 
 " [gruvbox_]
 " Plugin for the color scheme
 " https://github.com/morhetz/gruvbox
 Plugin 'morhetz/gruvbox'
 
-" [ack_]
-" Plugin to search files recursively using ack
-" https://github.com/mileszs/ack.vim
-Plugin 'mileszs/ack.vim'
+" [latex_box_]
+" Plugin for latex compilation
+" https://github.com/LaTeX-Box-Team/LaTeX-Box
+Plugin 'LaTeX-Box-Team/LaTeX-Box'
+
+" [nerdcommenter_]
+" Plugin with keybindings for rapid commenting
+" https://github.com/scrooloose/nerdcommenter
+Plugin 'scrooloose/nerdcommenter'
 
 " [startify_]
 " Plugin for a fancy startup screen
 " https://github.com/mhinz/vim-startify
 Plugin 'mhinz/vim-startify'
+
+" [supertab_]
+" Plugin to for tab completing in insert mode
+" https://github.com/ervandew/supertab
+Plugin 'ervandew/supertab'
 " }}}
 
 " Vundle End {{{
@@ -87,11 +87,6 @@ if $COLORTERM == 'gnome-terminal'
 	set t_Co=256
 endif
 syntax enable
-
-" [gruvbox_]
-let g:gruvbox_italic=1
-colorscheme gruvbox
-set background=dark
 " }}}
 
 " File Settings {{{
@@ -176,6 +171,12 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
+" }}}
+
+" [gruvbox_] {{{
+let g:gruvbox_italic=1
+colorscheme gruvbox
+set background=dark
 " }}}
 
 " [nerd_] {{{
