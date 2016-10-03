@@ -1,6 +1,6 @@
 # Steps to set up init.vim, bashrc, gitconfig (requires neovim + Linux)
 
-1. You can also use this with
+1. Install nvim
    [nvim](https://github.com/neovim/neovim/wiki/Installing-Neovim):
 
 1. Clone the repository in your home directory:
