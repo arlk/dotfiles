@@ -88,19 +88,22 @@ syntax enable
 set encoding=utf-8
 scriptencoding utf-8
 
-" Move backups to /tmp folder"
+" Move backups to /tmp folder
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
-" Line wrapping after 79 characters "
+" Line wrapping after 79 characters
 :set tw=79
 :set fo+=t
 
-" Remove whitespace automatically "
+" Remove whitespace automatically
 autocmd BufWritePre * :%s/\s\+$//e
+
+" Always show status line
+set laststatus=2
 " }}}
 
 " Tabs and Spaces {{{
@@ -171,13 +174,59 @@ set background=dark
 " [lightline_] {{{
 let g:lightline = {
       \ 'colorscheme': 'gruvbox',
-      \ 'component': {
-      \   'readonly': '%{&readonly?"x":""}',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'fugitive', 'filename' ] ]
+      \ },
+      \ 'component_function': {
+      \   'fugitive': 'LightLineFugitive',
+      \   'readonly': 'LightLineReadonly',
+      \   'modified': 'LightLineModified',
+      \   'filename': 'LightLineFilename'
       \ },
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '|', 'right': '|' }
       \ }
-set laststatus=2
+
+function! LightLineFugitive()
+  if exists("*fugitive#head")
+    let branch = fugitive#head()
+    return branch !=# '' ? '--'.branch : ''
+  endif
+  return ''
+endfunction
+
+function! LightLineModified()
+  if &filetype == "help"
+    return ""
+  elseif &modified
+    return "+"
+  elseif &modifiable
+    return ""
+  else
+    return ""
+  endif
+endfunction
+
+function! LightLineReadonly()
+  if &filetype == "help"
+    return ""
+  elseif &readonly
+    return "x"
+  else
+    return ""
+  endif
+endfunction
+
+function! LightLineFugitive()
+  return exists('*fugitive#head') ? fugitive#head() : ''
+endfunction
+
+function! LightLineFilename()
+  return ('' != LightLineReadonly() ? LightLineReadonly() . ' ' : '') .
+       \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
+       \ ('' != LightLineModified() ? ' ' . LightLineModified() : '')
+endfunction
 " }}}
 
 " [nerdcommenter_] {{{
