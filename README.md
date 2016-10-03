@@ -24,7 +24,3 @@
     nvim init.vim
     :PlugInstall
     ```
-
-### Misc
-* Use [instant markdown preview](https://github.com/suan/vim-instant-markdown)
-  for viewing markdown edits in real time.
