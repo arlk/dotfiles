@@ -18,3 +18,5 @@
   r = reset
   rh = reset HEAD^
   rhH = reset HEAD^ --hard
+[core]
+  editor = 'nvim'

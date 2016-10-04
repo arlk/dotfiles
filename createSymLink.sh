@@ -3,23 +3,35 @@
 
 dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
-bak=~/dotfiles-backup
+bak=~/backup-dotfiles
 
 dotfiles="bashrc gitconfig"
+folders="nvim"
 
-echo "Storing dot files at $bak ..."
-mkdir -p $bak
-for file in $dotfiles; do
-    if [ -L ~/.$file ]; then
-      rm ~/.$file
-    else
-      mv ~/.$file $bak
-    fi
-done
+read -r -p "Symlink the dotfiles? [y/N] " response
+response=${response,,}
+if [[ $response =~ ^(yes|y)$ ]]; then
+  echo "Storing dot files at $bak ..."
+  mkdir -p $bak
+  for file in $dotfiles; do
+      if [ -L ~/.$file ]; then
+        rm ~/.$file
+      else
+        mv ~/.$file $bak
+      fi
+  done
 
-echo "Now creating symbolic links for new dot files"
-for file in $dotfiles; do
-    ln -s $dir/.$file ~/.$file
-done
+  echo "Now creating symbolic links for new dot files"
+  for file in $dotfiles; do
+      ln -sf $dir/.$file ~/.$file
+  done
+fi
+
+read -r -p "Symlink the dotfiles? [y/N] " response
+response=${response,,}
+if [[ $response =~ ^(yes|y)$ ]]; then
+  echo "Symlinking neovim"
+  ln -sf $dir/nvim ~/.config/nvim
+fi
 
 echo "Done successfully!"
