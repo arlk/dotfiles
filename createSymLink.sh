@@ -31,6 +31,7 @@ read -r -p "Symlink the dotfiles? [y/N] " response
 response=${response,,}
 if [[ $response =~ ^(yes|y)$ ]]; then
   echo "Symlinking neovim"
+  mkdir -p ~/.config
   ln -sf $dir/nvim ~/.config/nvim
 fi
 
