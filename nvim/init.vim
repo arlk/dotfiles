@@ -65,6 +65,11 @@ Plug 'mhinz/vim-startify'
 " Plugin to for tab completing in insert mode
 " https://github.com/ervandew/supertab
 Plug 'ervandew/supertab'
+
+" [tabularize_]
+" Plugin to for aligning lines around a character
+" https://github.com/godlygeek/tabular
+Plug 'godlygeek/tabular'
 " }}}
 
 " Plug End {{{
@@ -271,7 +276,9 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " [startify_] {{{
 let g:startify_bookmarks = [
-                      \ '~/.config/nvim/init.vim'
+                      \ '~/.config/nvim/init.vim',
+                      \ '~/.bashrc',
+                      \ '~/.gitconfig',
                       \ ]
 " }}}
 
