@@ -279,6 +279,7 @@ let g:startify_bookmarks = [
                       \ '~/.config/nvim/init.vim',
                       \ '~/.bashrc',
                       \ '~/.gitconfig',
+                      \ '~/.zshrc',
                       \ ]
 " }}}
 
