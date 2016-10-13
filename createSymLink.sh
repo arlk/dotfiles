@@ -8,7 +8,7 @@ bak=~/backup-dotfiles
 dotfiles="bashrc gitconfig"
 folders="nvim"
 
-read -r -p "Symlink the dotfiles? [y/N] " response
+read -r -p "Symlink .zshrc, .gitconfig? [y/N] " response
 response=${response,,}
 if [[ $response =~ ^(yes|y)$ ]]; then
   echo "Storing dot files at $bak ..."
@@ -27,11 +27,16 @@ if [[ $response =~ ^(yes|y)$ ]]; then
   done
 fi
 
-read -r -p "Symlink the dotfiles? [y/N] " response
+read -r -p "Symlink init.vim? [y/N] " response
 response=${response,,}
 if [[ $response =~ ^(yes|y)$ ]]; then
   echo "Symlinking neovim"
   mkdir -p ~/.config
+  if [ -L ~/.config/nvim]; then
+    rm ~/.config/nvim
+  else
+    mv ~/.config/nvim $bak
+  fi
   ln -sf $dir/nvim ~/.config/nvim
 fi
 
