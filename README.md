@@ -1,4 +1,21 @@
-# Steps to set up init.vim, bashrc, gitconfig (requires neovim + Linux)
+# Steps to set up init.vim, bashrc, zshrc, gitconfig (requires Linux)
+
+1. Clone the repository in your home directory:
+
+    ```bash
+    git clone https://github.com/arunlakshmanan/dotfiles.git
+    ```
+
+1. Use the install script if you use Debian:
+
+    ```bash
+    cd dotfiles
+    sudo ./install.sh
+    ```
+
+1. Logout and login if you chose to make zsh your default shell.
+
+## Manual setup (if you did _not_ use install.sh):
 
 1. This setup requires:
     1. [nvim](https://github.com/neovim/neovim/wiki/Installing-Neovim).
@@ -39,24 +56,11 @@
         sudo apt-get install xclip
         ```
 
-1. Clone the repository in your home directory:
-
-    ```bash
-    git clone https://github.com/arunlakshmanan/dotfiles.git
-    ```
-
-1. Create the symlinks:
-
-    ```bash
-    cd dotfiles
-    ./createSymLink.sh
-    ```
-
-1. Install [vim-plug](https://github.com/junegunn/vim-plug):
-    ```
-    curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    ```
+    1. Install [vim-plug](https://github.com/junegunn/vim-plug):
+        ```
+        curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+            https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        ```
 
 1. Open the init.vim and install the plugins:
 
