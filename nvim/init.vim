@@ -295,6 +295,9 @@ set pastetoggle=<F2>
 nnoremap <leader>t :tabnew
 " Open file under cursor in a new tab
 nnoremap gf <c-w>gf
+" Visual line movement
+nnoremap j gj
+nnoremap k gk
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
