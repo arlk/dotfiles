@@ -287,17 +287,29 @@ let g:startify_bookmarks = [
 " Keybindings {{{
 " Esc remapping
 inoremap jj <esc>
+
 " Select text written last time in insert mode
 nnoremap gV `[v`]
+
 " Turn off auto-indent while pasting
 set pastetoggle=<F2>
+
 " Open a buffer in new tab
 nnoremap <leader>t :tabnew
+
 " Open file under cursor in a new tab
 nnoremap gf <c-w>gf
+
 " Visual line movement
 nnoremap j gj
 nnoremap k gk
+
+" Add line without insert mode
+nnoremap <leader>o o<Esc>
+nnoremap <leader>O O<Esc>
+
+" xclip mapping
+:map <F3> :w !xclip -selection clipboard<CR><CR>
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
