@@ -17,6 +17,13 @@
 
 ## Manual setup (if you did _not_ use install.sh):
 
+1. Create the symlinks:
+
+    ```bash
+    cd dotfiles
+    sudo ./createSymLink.sh
+    ```
+
 1. This setup requires:
     1. [nvim](https://github.com/neovim/neovim/wiki/Installing-Neovim).
 
