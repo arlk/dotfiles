@@ -72,6 +72,5 @@
 1. Open the init.vim and install the plugins:
 
     ```
-    nvim nvim/init.vim
-    :PlugInstall
+    nvim +PlugInstall
     ```
