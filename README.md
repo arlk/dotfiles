@@ -16,14 +16,14 @@
         sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
         ```
 
-    1. [fzf](https://github.com/junegunn/fzf#installation)
+    1. (Optional)[fzf](https://github.com/junegunn/fzf#installation)
 
         ```bash
         git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
         ~/.fzf/install
         ```
 
-    1. [ag](https://github.com/ggreer/the_silver_searcher)
+    1. (Optional)[ag](https://github.com/ggreer/the_silver_searcher)
         ```bash
         apt-get install silversearcher-ag
         ```
@@ -32,6 +32,11 @@
         ```bash
         sudo apt-get install zsh
         curl -sL zplug.sh/installer | zsh
+        ```
+
+    1. (Optional) xclip for easy copy from vim buffer:
+        ```bash
+        sudo apt-get install xclip
         ```
 
 1. Clone the repository in your home directory:
