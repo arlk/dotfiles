@@ -1,4 +1,4 @@
-# Vundle files
+# nvim folders
 after/
 autoload/
 plugged/
@@ -7,3 +7,6 @@ plugged/
 *~
 *.swo
 *.swp
+
+# git dirs
+.netrwhist
