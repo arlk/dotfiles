@@ -41,7 +41,7 @@ if [[ $response =~ ^(yes|y)$ ]]; then
   read -r -p "Make zsh default? [y/N] " response
   response=${response,,}
   if [[ $response =~ ^(yes|y)$ ]]; then
-    chsh -s $(which zsh)
+    sudo -u $USER sudo -s $(which zsh)
   fi
 fi
 
