@@ -307,8 +307,12 @@ nnoremap j gj
 nnoremap k gk
 
 " Add line without insert mode
-nnoremap <leader>o o<Esc>
-nnoremap <leader>O O<Esc>
+nnoremap <c-o> o<Esc>
+nnoremap <c-O> O<Esc>
+
+" Add space without insert mode
+nnoremap <c-a> a<space><Esc>
+nnoremap <c-i> i<space><Esc>
 
 " xclip mapping
 :map <F3> :w !xclip -selection clipboard<CR><CR>
