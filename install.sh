@@ -7,7 +7,7 @@ if [ "$EUID" -ne 0 ]
 fi
 
 INSTALLED=$(dpkg -l neovim)
-if [ $INSTALLED != "" ]; then
+if [ "$INSTALLED" == "" ]; then
 echo "Installing neovim...\n"
 apt-get install software-properties-common &&
 
@@ -23,7 +23,7 @@ echo "Installing python 2+3 and pip...\n"
 apt-get install python-dev python-pip python3-dev python3-pip &&
 
 INSTALLED=$(dpkg -l vim)
-if [ $INSTALLED != "" ]; then
+if [ "$INSTALLED" == "" ]; then
   update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
 fi
 update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
@@ -39,7 +39,7 @@ fi
 fi
 
 INSTALLED=$(dpkg -l silversearcher-ag)
-if [ $INSTALLED != "" ]; then
+if [ "$INSTALLED" == "" ]; then
 read -r -p "Install ag? [y/N] " response
 response=${response,,}
 if [[ $response =~ ^(yes|y)$ ]]; then
@@ -49,7 +49,7 @@ fi
 fi
 
 INSTALLED=$(dpkg -l zsh)
-if [ $INSTALLED != "" ]; then
+if [ "$INSTALLED" == "" ]; then
 read -r -p "Install zsh? [y/N] " response
 response=${response,,}
 if [[ $response =~ ^(yes|y)$ ]]; then
@@ -66,7 +66,7 @@ fi
 fi
 
 INSTALLED=$(dpkg -l xclip)
-if [ $INSTALLED != "" ]; then
+if [ "$INSTALLED" == "" ]; then
 read -r -p "Install xclip? [y/N] " response
 response=${response,,}
 if [[ $response =~ ^(yes|y)$ ]]; then
@@ -76,7 +76,7 @@ fi
 fi
 
 echo "Creating symlinks...\n"
-sudo -u $USER source createSymLink.sh
+sudo -u $USER ./createSymLink.sh
 
 echo "Installing vim-plug...\n"
 sudo -u $USER curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
