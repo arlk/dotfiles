@@ -16,10 +16,10 @@ apt-get update &&
 apt-get install neovim
 fi
 
-echo "Installing curl...\n"
-apt-get install curl &&
+echo "Installing git and curl...\n"
+apt-get install git curl &&
 
-echo "Installing python...\n"
+echo "Installing python 2+3 and pip...\n"
 apt-get install python-dev python-pip python3-dev python3-pip &&
 
 INSTALLED=$(dpkg -l vim)
