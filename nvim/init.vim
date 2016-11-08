@@ -70,6 +70,11 @@ Plug 'ervandew/supertab'
 " Plugin to for aligning lines around a character
 " https://github.com/godlygeek/tabular
 Plug 'godlygeek/tabular'
+
+" [surround_]
+" Plugin to change words between brackets, parantheses, etc
+" https://github.com/tpope/vim-surround
+Plug 'tpope/vim-surround'
 " }}}
 
 " Plug End {{{
@@ -316,6 +321,9 @@ nnoremap <c-i> i<space><Esc>
 
 " xclip mapping
 :map <F3> :w !xclip -selection clipboard<CR><CR>
+
+" Disable ex mode
+:map Q <Nop>
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0

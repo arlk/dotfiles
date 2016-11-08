@@ -87,6 +87,10 @@ source $HOME/catkin_ws/devel/setup.zsh
 export PATH=$PATH:/usr/local/MATLAB/R2016a/bin
 # }}}
 
+# texlive {{{
+export PATH=$PATH:/opt/texbin
+# }}}
+
 # aliases {{{
 alias ls='ls --color'
 alias ll='ls -al'
