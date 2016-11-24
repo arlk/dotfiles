@@ -105,6 +105,8 @@ set writebackup
 let tex_files = ['latex', 'tex', 'plaintex']
 autocmd BufEnter * if index(tex_files, &ft) < 0 | set tw=79
 autocmd BufEnter * if index(tex_files, &ft) < 0 | set fo+=t
+autocmd TabEnter * if index(tex_files, &ft) < 0 | set tw=79
+autocmd TabEnter * if index(tex_files, &ft) < 0 | set fo+=t
 
 " Remove whitespace automatically
 autocmd BufWritePre * :%s/\s\+$//e
