@@ -9,18 +9,18 @@ fi
 INSTALLED=$(dpkg -l neovim)
 if [ "$INSTALLED" == "" ]; then
 echo "Installing neovim...\n"
-apt-get install software-properties-common &&
+apt-get install software-properties-common
 
-add-apt-repository ppa:neovim-ppa/unstable &&
-apt-get update &&
+add-apt-repository ppa:neovim-ppa/unstable
+apt-get update
 apt-get install neovim
 fi
 
 echo "Installing git and curl...\n"
-apt-get install git curl &&
+apt-get install git curl
 
 echo "Installing python 2+3 and pip...\n"
-apt-get install python-dev python-pip python3-dev python3-pip &&
+apt-get install python-dev python-pip python3-dev python3-pip
 
 INSTALLED=$(dpkg -l vim)
 if [ "$INSTALLED" == "" ]; then
@@ -33,7 +33,7 @@ read -r -p "Install fzf? [y/N] " response
 response=${response,,}
 if [[ $response =~ ^(yes|y)$ ]]; then
   echo "Installing fzf...\n"
-  sudo -u $USER git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf &&
+  sudo -u $USER git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
   sudo -u $USER /.fzf/install
 fi
 fi
