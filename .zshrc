@@ -5,7 +5,7 @@ source ~/.zplug/init.zsh
 # }}}
 
 # zplug packages {{{
-zplug "plugins/git"
+zplug "plugins/git", from:oh-my-zsh
 
 # forked from @frmendes
 zplug "arunlakshmanan/geometry"

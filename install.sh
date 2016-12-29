@@ -28,7 +28,7 @@ read -r -p "Install fzf? [y/N] " response
 response=${response,,}
 if [[ $response =~ ^(yes|y)$ ]]; then
   echo "Installing fzf...\n"
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf 
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
   ~/.fzf/install
 fi
 fi
@@ -52,6 +52,8 @@ if [[ $response =~ ^(yes|y)$ ]]; then
   sudo apt-get install zsh
   echo "Installing zplug...\n"
   curl -sL zplug.sh/installer | zsh
+  echo "Installing zsh autosuggestions...\n"
+  git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
   read -r -p "Make zsh default? [y/N] " response
   response=${response,,}
   if [[ $response =~ ^(yes|y)$ ]]; then
