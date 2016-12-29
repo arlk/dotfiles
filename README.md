@@ -10,7 +10,7 @@
 
     ```bash
     cd dotfiles
-    sudo ./install.sh
+    ./install.sh
     ```
 
 1. Logout and login if you chose to make zsh your default shell.
