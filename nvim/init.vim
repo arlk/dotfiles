@@ -312,6 +312,8 @@ nnoremap gf <c-w>gf
 " Visual line movement
 nnoremap j gj
 nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 
 " Add line without insert mode
 nnoremap <c-o> o<Esc>
@@ -326,6 +328,12 @@ nnoremap <c-i> i<space><Esc>
 
 " Disable ex mode
 :map Q <Nop>
+
+" Remap W to w in commands
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
