@@ -180,9 +180,6 @@ export PATH=$PATH:/usr/local/MATLAB/R2016a/bin
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-# Autocomplete for fab
-source $HOME/git_projs/fabric-completion/fabric-completion.bash
-
 # }}}
 
 # vim:foldmethod=marker:foldlevel=0

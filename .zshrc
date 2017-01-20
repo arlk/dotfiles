@@ -5,12 +5,12 @@ source ~/.zplug/init.zsh
 # }}}
 
 # zplug packages {{{
-zplug "plugins/git"
+zplug "plugins/git", from:oh-my-zsh
 
 # forked from @frmendes
 zplug "arunlakshmanan/geometry"
 
-zplug "zsh-users/zsh-syntax-highlighting", nice:10
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 # }}}
 
 # zplug load {{{
