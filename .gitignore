@@ -2,6 +2,7 @@
 after/
 autoload/
 plugged/
+spell/
 
 # Temp files
 *~
