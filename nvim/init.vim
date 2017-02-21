@@ -15,6 +15,11 @@ call plug#begin('~/.vim/plugged')
 " https://github.com/mileszs/ack.vim
 Plug 'mileszs/ack.vim'
 
+" [auctex_]
+" Macros for tex
+" http://www.vim.org/scripts/script.php?script_id=162
+Plug 'auctex.vim'
+
 " [comfortable_motion_]
 " Plugin to search files recursively using ack
 " https://github.com/yuttie/comfortable-motion
@@ -24,6 +29,11 @@ Plug 'yuttie/comfortable-motion.vim'
 " Plugin to list the buffers in vim
 " https://github.com/bling/vim-bufferline
 Plug 'bling/vim-bufferline'
+
+" [deoplete_]
+" Plugin for async completion
+" https://github.com/Shougo/deoplete.nvim
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " [easymotion_]
 " Plugin to move faster in code
@@ -51,6 +61,11 @@ Plug 'junegunn/fzf.vim'
 " https://github.com/airblade/vim-gitgutter
 Plug 'airblade/vim-gitgutter'
 
+" [grammarous_]
+" Plugin to check grammar in text
+" https://github.com/rhysd/vim-grammarous
+Plug 'rhysd/vim-grammarous'
+
 " [gruvbox_]
 " Plugin for the color scheme
 " https://github.com/morhetz/gruvbox
@@ -61,10 +76,21 @@ Plug 'morhetz/gruvbox'
 " https://github.com/itchyny/lightline.vim
 Plug 'itchyny/lightline.vim'
 
+" [neosnippet_]
+" Plugin for adding snippets
+" https://github.com/Shougo/neosnippet
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+
 " [nerdcommenter_]
 " Plugin with keybindings for rapid commenting
 " https://github.com/scrooloose/nerdcommenter
 Plug 'scrooloose/nerdcommenter'
+
+" [online_thesaurus_]
+" Plugin to access thesaurus from vim
+" https://github.com/beloglazov/vim-online-thesaurus
+Plug 'beloglazov/vim-online-thesaurus'
 
 " [repeat_]
 " Plugin to repeat any last command
@@ -75,11 +101,6 @@ Plug 'tpope/vim-repeat'
 " Plugin for a fancy startup screen
 " https://github.com/mhinz/vim-startify
 Plug 'mhinz/vim-startify'
-
-" [supertab_]
-" Plugin to for tab completing in insert mode
-" https://github.com/ervandew/supertab
-Plug 'ervandew/supertab'
 
 " [surround_]
 " Plugin to change words between brackets, parantheses, etc
@@ -95,6 +116,11 @@ Plug 'godlygeek/tabular'
 " Plugin for latex compilation
 " https://github.com/lervag/vimtex
 Plug 'lervag/vimtex'
+
+" [wordy_]
+" Plugin to help with word usuage
+" https://github.com/reedes/vim-wordy
+Plug 'reedes/vim-wordy'
 " }}}
 
 " Plug End {{{
@@ -186,6 +212,19 @@ set foldlevelstart=10
 set foldnestmax=10
 nnoremap <space> za
 set foldmethod=indent
+" }}}
+
+" [deoplete_] {{{
+" Use Deoplete.
+let g:deoplete#enable_at_startup = 1
+
+" Let <Tab> also do completion
+inoremap <silent><expr> <Tab>
+\ pumvisible() ? "\<C-n>" :
+\ deoplete#mappings#manual_complete()
+
+" Close the documentation window when completion is done
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 " }}}
 
 " [fzf_] {{{
@@ -311,6 +350,22 @@ let g:startify_bookmarks = [
                       \ '~/.gitconfig',
                       \ '~/.zshrc',
                       \ ]
+" }}}
+
+" [tex_] {{{
+if !exists('g:deoplete#omni#input_patterns')
+    let g:deoplete#omni#input_patterns = {}
+endif
+let g:deoplete#omni#input_patterns.tex = '\\(?:'
+      \ .  '\w*cite\w*(?:\s*\[[^]]*\]){0,2}\s*{[^}]*'
+      \ . '|\w*ref(?:\s*\{[^}]*|range\s*\{[^,}]*(?:}{)?)'
+      \ . '|hyperref\s*\[[^]]*'
+      \ . '|includegraphics\*?(?:\s*\[[^]]*\]){0,2}\s*\{[^}]*'
+      \ . '|(?:include(?:only)?|input)\s*\{[^}]*'
+      \ . '|\w*(gls|Gls|GLS)(pl)?\w*(\s*\[[^]]*\]){0,2}\s*\{[^}]*'
+      \ . '|includepdf(\s*\[[^]]*\])?\s*\{[^}]*'
+      \ . '|includestandalone(\s*\[[^]]*\])?\s*\{[^}]*'
+      \ .')'
 " }}}
 
 " Keybindings {{{
