@@ -5,10 +5,10 @@ dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 bak=~/backup-dotfiles
 
-dotfiles="zshrc bashrc gitconfig agignore"
+dotfiles="zshrc bashrc gitconfig agignore latexmkrc"
 folders="nvim"
 
-read -r -p "Symlink .zshrc, .bashrc, .gitconfig, .agignore? [y/N] " response
+read -r -p "Symlink .zshrc, .bashrc, .gitconfig, .agignorem, .latexmkrc? [y/N] " response
 response=${response,,}
 if [[ $response =~ ^(yes|y)$ ]]; then
   echo "Storing dot files at $bak ..."
