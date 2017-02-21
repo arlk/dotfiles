@@ -52,7 +52,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdcommenter'
 
 " [repeat_]
-" Plugin to change words between brackets, parantheses, etc
+" Plugin to repeat any last command
 " https://github.com/tpope/vim-repeat
 Plug 'tpope/vim-repeat'
 
