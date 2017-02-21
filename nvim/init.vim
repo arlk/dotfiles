@@ -80,7 +80,7 @@ Plug 'itchyny/lightline.vim'
 " Plugin for adding snippets
 " https://github.com/Shougo/neosnippet
 Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
+Plug 'arunlakshmanan/neosnippet-snippets'
 
 " [nerdcommenter_]
 " Plugin with keybindings for rapid commenting
