@@ -1,3 +1,0 @@
-[submodule "nvim/auctex.vim"]
-	path = nvim/auctex.vim
-	url = https://github.com/vim-scripts/auctex.vim.git
