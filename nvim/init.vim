@@ -41,11 +41,6 @@ Plug 'airblade/vim-gitgutter'
 " https://github.com/morhetz/gruvbox
 Plug 'morhetz/gruvbox'
 
-" [tex_]
-" Plugin for latex compilation
-" https://github.com/lervag/vimtex
-Plug 'lervag/vimtex'
-
 " [lightline_]
 " Plugin for footer colorizer
 " https://github.com/itchyny/lightline.vim
@@ -66,15 +61,20 @@ Plug 'mhinz/vim-startify'
 " https://github.com/ervandew/supertab
 Plug 'ervandew/supertab'
 
+" [surround_]
+" Plugin to change words between brackets, parantheses, etc
+" https://github.com/tpope/vim-surround
+Plug 'tpope/vim-surround'
+
 " [tabularize_]
 " Plugin to for aligning lines around a character
 " https://github.com/godlygeek/tabular
 Plug 'godlygeek/tabular'
 
-" [surround_]
-" Plugin to change words between brackets, parantheses, etc
-" https://github.com/tpope/vim-surround
-Plug 'tpope/vim-surround'
+" [tex_]
+" Plugin for latex compilation
+" https://github.com/lervag/vimtex
+Plug 'lervag/vimtex'
 " }}}
 
 " Plug End {{{
