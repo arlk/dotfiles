@@ -148,11 +148,13 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
 " Line wrapping after 79 characters
-let tex_files = ['latex', 'tex', 'plaintex']
-autocmd BufEnter * if index(tex_files, &ft) < 0 | set tw=79
-autocmd BufEnter * if index(tex_files, &ft) < 0 | set fo+=t
-autocmd TabEnter * if index(tex_files, &ft) < 0 | set tw=79
-autocmd TabEnter * if index(tex_files, &ft) < 0 | set fo+=t
+" let tex_files = ['latex', 'tex', 'plaintex']
+" au! BufEnter * if index(tex_files, &ft) < 0 | set tw=79
+" au! BufEnter * if index(tex_files, &ft) < 0 | set fo+=t
+" au! TabEnter * if index(tex_files, &ft) < 0 | set tw=79
+" au! TabEnter * if index(tex_files, &ft) < 0 | set fo+=t
+" au! TabNewEntered * if index(tex_files, &ft) < 0 | set tw=79
+" au! TabNewEntered * if index(tex_files, &ft) < 0 | set fo+=t
 
 " Remove whitespace automatically
 autocmd BufWritePre * :%s/\s\+$//e
