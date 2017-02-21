@@ -83,6 +83,10 @@ source /opt/ros/$ROS_DISTRO/setup.zsh
 source $HOME/catkin_ws/devel/setup.zsh
 # }}}
 
+# cf-debugging {{{
+export PATH=$PATH:$HOME/bin/gcc-arm-none-eabi/bin
+# }}}
+
 # matlab {{{
 export PATH=$PATH:/usr/local/MATLAB/R2016a/bin
 # }}}
