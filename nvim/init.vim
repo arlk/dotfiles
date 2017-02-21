@@ -349,6 +349,9 @@ let g:startify_bookmarks = [
                       \ '~/.gitconfig',
                       \ '~/.zshrc',
                       \ ]
+
+" Open Startify in new tab
+:nnoremap <leader><leader>s :tabe %<CR>:Startify<CR>
 " }}}
 
 " [tex_] {{{
@@ -408,6 +411,11 @@ nnoremap <c-i> i<space><Esc>
 :command Wq wq
 :command W w
 :command Q q
+
+" Open terminal in newtab
+:nnoremap <leader><leader>t :tabe term://.//zsh<CR><Insert>
+" Esc to leave terminal mode
+:tnoremap <Esc> <C-\><C-n>
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
