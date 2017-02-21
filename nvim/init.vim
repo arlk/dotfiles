@@ -15,10 +15,25 @@ call plug#begin('~/.vim/plugged')
 " https://github.com/mileszs/ack.vim
 Plug 'mileszs/ack.vim'
 
+" [comfortable_motion_]
+" Plugin to search files recursively using ack
+" https://github.com/yuttie/comfortable-motion
+Plug 'yuttie/comfortable-motion.vim'
+
 " [bufferline_]
 " Plugin to list the buffers in vim
 " https://github.com/bling/vim-bufferline
 Plug 'bling/vim-bufferline'
+
+" [easymotion_]
+" Plugin to move faster in code
+" https://github.com/easymotion/vim-easymotion
+Plug 'easymotion/vim-easymotion'
+
+" [file_line_]
+" Plugin to open files at a given line number
+" https://github.com/bogado/file-line
+Plug 'bogado/file-line'
 
 " [fugitive_]
 " Plugin for commiting directly from vim
