@@ -80,7 +80,7 @@ Plug 'itchyny/lightline.vim'
 " Plugin for adding snippets
 " https://github.com/Shougo/neosnippet
 Plug 'Shougo/neosnippet'
-Plug 'arunlakshmanan/neosnippet-snippets'
+Plug 'Shougo/neosnippet-snippets'
 
 " [nerdcommenter_]
 " Plugin with keybindings for rapid commenting
@@ -217,6 +217,9 @@ set foldmethod=indent
 " }}}
 
 " [deoplete_] [neosnippet_] [auto_pairs_] {{{
+let g:neosnippet#snippets_directory = [
+                \ "~/.config/nvim/snips/"
+                \ ]
 let g:AutoPairsMapCR=0
 let g:deoplete#auto_complete_start_length = 1
 let g:deoplete#enable_at_startup = 1
