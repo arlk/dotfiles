@@ -51,6 +51,11 @@ Plug 'itchyny/lightline.vim'
 " https://github.com/scrooloose/nerdcommenter
 Plug 'scrooloose/nerdcommenter'
 
+" [repeat_]
+" Plugin to change words between brackets, parantheses, etc
+" https://github.com/tpope/vim-repeat
+Plug 'tpope/vim-repeat'
+
 " [startify_]
 " Plugin for a fancy startup screen
 " https://github.com/mhinz/vim-startify
