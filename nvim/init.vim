@@ -15,10 +15,10 @@ call plug#begin('~/.vim/plugged')
 " https://github.com/mileszs/ack.vim
 Plug 'mileszs/ack.vim'
 
-" [auctex_]
-" Macros for tex
-" http://www.vim.org/scripts/script.php?script_id=162
-Plug 'auctex.vim'
+" [auto_pairs_]
+" Plugin to help with parantheses
+" https://github.com/jiangmiao/auto_pairs.vim
+Plug 'jiangmiao/auto-pairs'
 
 " [comfortable_motion_]
 " Plugin to search files recursively using ack
@@ -214,17 +214,14 @@ nnoremap <space> za
 set foldmethod=indent
 " }}}
 
-" [deoplete_] {{{
-" Use Deoplete.
+" [deoplete_] [neosnippet_] [auto_pairs_] {{{
+let g:AutoPairsMapCR=0
+let g:deoplete#auto_complete_start_length = 1
 let g:deoplete#enable_at_startup = 1
-
-" Let <Tab> also do completion
-inoremap <silent><expr> <Tab>
-\ pumvisible() ? "\<C-n>" :
-\ deoplete#mappings#manual_complete()
-
-" Close the documentation window when completion is done
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+let g:deoplete#enable_smart_case = 1
+imap <expr><TAB> pumvisible() ? "\<C-n>" : (neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>")
+imap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+imap <expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\<CR>\<Plug>AutoPairsReturn"
 " }}}
 
 " [fzf_] {{{
