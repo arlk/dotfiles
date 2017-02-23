@@ -1,4 +1,4 @@
-# Steps to set up init.vim, bashrc, zshrc, gitconfig (requires Linux)
+# Steps to set up init.vim, bashrc, zshrc, gitconfig, ...
 
 1. Clone the repository in your home directory:
 
