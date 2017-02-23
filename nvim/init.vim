@@ -112,6 +112,11 @@ Plug 'tpope/vim-surround'
 " https://github.com/godlygeek/tabular
 Plug 'godlygeek/tabular'
 
+" [tagbar_]
+" Plugin to display program hierarchy
+" https://github.com/majutsushi/tagbar
+Plug 'majutsushi/tagbar'
+
 " [tex_]
 " Plugin for latex compilation
 " https://github.com/lervag/vimtex
@@ -355,6 +360,10 @@ let g:startify_bookmarks = [
 
 " Open Startify in new tab
 :nnoremap <leader><leader>s :tabe %<CR>:Startify<CR>
+" }}}
+
+" [tagbar_] {{{
+nmap <F8> :TagbarToggle<CR>
 " }}}
 
 " [tex_] {{{
