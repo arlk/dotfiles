@@ -7,10 +7,11 @@ source ~/.zplug/init.zsh
 # zplug packages {{{
 zplug "plugins/git", from:oh-my-zsh
 
-# forked from @frmendes
 zplug "arunlakshmanan/geometry"
 
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+
+zplug "plugins/fabric",   from:oh-my-zsh
 # }}}
 
 # zplug load {{{
