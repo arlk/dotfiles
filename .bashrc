@@ -5,6 +5,14 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+#Moo to glory
+fortune | cowsay
+
+#Just some short-hands
+alias update='sudo apt-get update;sudo apt-get upgrade'
+alias remove='sudo apt-get remove'
+alias open='xdg-open'
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;

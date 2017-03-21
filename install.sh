@@ -14,6 +14,9 @@ fi
 echo "Installing git and curl...\n"
 sudo apt-get install git curl
 
+echo "Installing fortune and cowsay...\n"
+  sudo apt-get install fortune cowsay
+
 echo "Installing python 2+3 and pip...\n"
 sudo apt-get install python-dev python-pip python3-dev python3-pip
 
