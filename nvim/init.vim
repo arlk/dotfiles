@@ -413,12 +413,14 @@ vnoremap j gj
 vnoremap k gk
 
 " Add line without insert mode
-nnoremap <c-o> o<Esc>
-nnoremap <c-O> O<Esc>
+" Removing them after Ian's suggests for better remaps
+" nnoremap <c-o> o<Esc>
+" nnoremap <c-O> O<Esc>
 
 " Add space without insert mode
-nnoremap <c-a> a<space><Esc>
-nnoremap <c-i> i<space><Esc>
+" Removing them after Ian's suggests for better remaps
+" nnoremap <c-a> a<space><Esc>
+" nnoremap <c-i> i<space><Esc>
 
 " Move between splits
 nnoremap <c-h> <c-w><c-h>
