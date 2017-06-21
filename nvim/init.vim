@@ -20,11 +20,6 @@ Plug 'mileszs/ack.vim'
 " https://github.com/jiangmiao/auto_pairs.vim
 Plug 'jiangmiao/auto-pairs'
 
-" [comfortable_motion_]
-" Plugin to search files recursively using ack
-" https://github.com/yuttie/comfortable-motion
-Plug 'yuttie/comfortable-motion.vim'
-
 " [bufferline_]
 " Plugin to list the buffers in vim
 " https://github.com/bling/vim-bufferline
