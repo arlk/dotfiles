@@ -67,7 +67,7 @@ export KEYTIMEOUT=20
 
 bindkey -v
 
-# Use jk for ESC
+# Use jj for ESC
 bindkey -M viins 'jj' vi-cmd-mode
 
 # Use vim cli mode
