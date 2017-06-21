@@ -71,6 +71,11 @@ Plug 'morhetz/gruvbox'
 " https://github.com/itchyny/lightline.vim
 Plug 'itchyny/lightline.vim'
 
+" [neoformat_]
+" Plugin for formatting code
+" https://github.com/sbdchd/neoformat
+Plug 'sbdchd/neoformat'
+
 " [neosnippet_]
 " Plugin for adding snippets
 " https://github.com/Shougo/neosnippet
@@ -326,6 +331,10 @@ function! LightLineFilename()
        \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
        \ ('' != LightLineModified() ? ' ' . LightLineModified() : '')
 endfunction
+" }}}
+
+" [neoformat_] {{{
+nmap <F9> :Neoformat<CR>
 " }}}
 
 " [nerdcommenter_] {{{
