@@ -30,6 +30,9 @@ zplug load
 # }}}
 
 # appearance {{{
+#Moo to glory
+fortune | cowsay
+
 # Uncomment following line if you want to disable command autocorrection
 DISABLE_CORRECTION="true"
 
