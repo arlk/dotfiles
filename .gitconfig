@@ -11,6 +11,7 @@
   cl = clone
   ci = commit
   co = checkout
+  cb = checkout -b
   br = branch
   diff = diff --word-diff
   dc = diff --cached
