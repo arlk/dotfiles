@@ -84,25 +84,26 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # }}}
 
 # ros {{{
-export PS1="$ROSE\$(git_star)\$(parse_git_branch)${TARDIS}\\u:${ORANGE}\\W\$${RESET} "
-export ROS_DISTRO=kinetic
-export ROS_PACKAGE_PATH=/opt/ros/$ROS_DISTRO/share:/opt/ros/$ROS_DISTRO/stacks
-export ROS_IP=$(ifconfig  | grep 'inet addr:'| grep -v '127.0.0.1' | cut -d: -f2 | awk '{print $1}')
-
-source /opt/ros/$ROS_DISTRO/setup.zsh
-source $HOME/catkin_ws/devel/setup.zsh
+# maybe make a function!
+#export PS1="$ROSE\$(git_star)\$(parse_git_branch)${TARDIS}\\u:${ORANGE}\\W\$${RESET} "
+#export ROS_DISTRO=kinetic
+#export ROS_PACKAGE_PATH=/opt/ros/$ROS_DISTRO/share:/opt/ros/$ROS_DISTRO/stacks
+#export ROS_IP=$(ifconfig  | grep 'inet addr:'| grep -v '127.0.0.1' | cut -d: -f2 | awk 'FNR == 1 {print $1}')
+#
+#source /opt/ros/$ROS_DISTRO/setup.zsh
+#source $HOME/catkin_ws/devel/setup.zsh
 # }}}
 
 # cf-debugging {{{
-export PATH=$PATH:$HOME/bin/gcc-arm-none-eabi/bin
+# export PATH=$PATH:$HOME/bin/gcc-arm-none-eabi/bin
 # }}}
 
 # matlab {{{
-export PATH=$PATH:/usr/local/MATLAB/R2016a/bin
+# export PATH=$PATH:/usr/local/MATLAB/R2016a/bin
 # }}}
 
 # texlive {{{
-export PATH=$PATH:/opt/texbin
+# export PATH=$PATH:/opt/texbin
 # }}}
 
 # aliases {{{
@@ -112,6 +113,14 @@ alias lh='ls -hl'
 alias l='ls -alt'
 alias sudo='sudo '
 alias tlmgr='env PATH="$PATH" tlmgr'
+# }}}
+
+# distcc {{{
+# nooo -ian
+#export CCACHE_PREFIX="distcc"
+#export CC="ccache gcc-5" CXX="ccache g++-5"
+#export DISTCC_HOSTS='localhost/8'
+#alias cdc="catkin build -p$(distcc -j) -j$(distcc -j) --no-jobserver"
 # }}}
 
 # vim:foldmethod=marker:foldlevel=0

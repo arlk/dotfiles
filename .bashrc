@@ -168,20 +168,20 @@ git_star() {
 export PS1="$ROSE\$(git_star)\$(parse_git_branch)${TARDIS}\\u:${ORANGE}\\W\$${RESET} "
 # }}}
 
-# ROS environ vars {{{
-export PS1="$ROSE\$(git_star)\$(parse_git_branch)${TARDIS}\\u:${ORANGE}\\W\$${RESET} "
-export ROS_DISTRO=kinetic
-source /opt/ros/$ROS_DISTRO/setup.bash
-export ROS_PACKAGE_PATH=/opt/ros/$ROS_DISTRO/share:/opt/ros/$ROS_DISTRO/stacks
+# # ROS environ vars {{{
+# export PS1="$ROSE\$(git_star)\$(parse_git_branch)${TARDIS}\\u:${ORANGE}\\W\$${RESET} "
+# export ROS_DISTRO=kinetic
+# source /opt/ros/$ROS_DISTRO/setup.bash
+# export ROS_PACKAGE_PATH=/opt/ros/$ROS_DISTRO/share:/opt/ros/$ROS_DISTRO/stacks
+#
+# export ROS_IP=$(ifconfig  | grep 'inet addr:'| grep -v '127.0.0.1' | cut -d: -f2 | awk 'FNR == 1 {print $1}')
+# source $HOME/catkin_ws/devel/setup.bash
+# # }}}
 
-export ROS_IP=$(ifconfig  | grep 'inet addr:'| grep -v '127.0.0.1' | cut -d: -f2 | awk '{print $1}')
-source $HOME/catkin_ws/devel/setup.bash
-# }}}
-
-# Misc environ vars {{{
-# For matlab
-export PATH=$PATH:/usr/local/MATLAB/R2016a/bin
-# }}}
+# # Misc environ vars {{{
+# # For matlab
+# export PATH=$PATH:/usr/local/MATLAB/R2016a/bin
+# # }}}
 
 # Sourcing files {{{
 # For fzf
