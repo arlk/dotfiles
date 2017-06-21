@@ -7,6 +7,8 @@ source ~/.zplug/init.zsh
 # zplug packages {{{
 zplug "plugins/git", from:oh-my-zsh
 
+zplug "lib/directories", from:oh-my-zsh
+
 zplug "arunlakshmanan/geometry"
 
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
