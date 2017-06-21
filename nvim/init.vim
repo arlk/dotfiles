@@ -161,6 +161,10 @@ set writebackup
 " au! TabNewEntered * if index(tex_files, &ft) < 0 | set tw=79
 " au! TabNewEntered * if index(tex_files, &ft) < 0 | set fo+=t
 
+" Make launch/world files xml type
+au BufNewFile,BufRead,TabEnter,TabNewEntered *.launch set filetype=xml
+au BufNewFile,BufRead,TabEnter,TabNewEntered *.world set filetype=xml
+
 " Remove whitespace automatically
 autocmd BufWritePre * :%s/\s\+$//e
 " }}}
