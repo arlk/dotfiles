@@ -1,6 +1,6 @@
 [user]
 	email = lakshma2@illinois.edu
-	name = lakshma2
+	name = arlk
 [alias]
   la = "!git config -l | grep alias | cut -c 7-"
 

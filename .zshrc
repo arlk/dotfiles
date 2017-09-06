@@ -91,6 +91,7 @@ export ROS_IP=$(ifconfig  | grep 'inet addr:'| grep -v '127.0.0.1' | cut -d: -f2
 
 source /opt/ros/$ROS_DISTRO/setup.zsh
 source $HOME/catkin_ws/devel/setup.zsh
+export VICON_IP='192.168.1.5'
 # }}}
 
 # cf-debugging {{{

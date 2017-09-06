@@ -126,6 +126,9 @@ Plug 'lervag/vimtex'
 " Plugin to help with word usuage
 " https://github.com/reedes/vim-wordy
 Plug 'reedes/vim-wordy'
+
+Plug 'sbdchd/neoformat'
+nmap <F9> :Neoformat<CR>
 " }}}
 
 " Plug End {{{
@@ -153,13 +156,13 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
 " Line wrapping after 79 characters
-" let tex_files = ['latex', 'tex', 'plaintex']
-" au! BufEnter * if index(tex_files, &ft) < 0 | set tw=79
-" au! BufEnter * if index(tex_files, &ft) < 0 | set fo+=t
-" au! TabEnter * if index(tex_files, &ft) < 0 | set tw=79
-" au! TabEnter * if index(tex_files, &ft) < 0 | set fo+=t
-" au! TabNewEntered * if index(tex_files, &ft) < 0 | set tw=79
-" au! TabNewEntered * if index(tex_files, &ft) < 0 | set fo+=t
+let tex_files = ['latex', 'tex', 'plaintex']
+au! BufEnter * if index(tex_files, &ft) < 0 | set tw=79
+au! BufEnter * if index(tex_files, &ft) < 0 | set fo+=t
+au! TabEnter * if index(tex_files, &ft) < 0 | set tw=79
+au! TabEnter * if index(tex_files, &ft) < 0 | set fo+=t
+au! TabNewEntered * if index(tex_files, &ft) < 0 | set tw=79
+au! TabNewEntered * if index(tex_files, &ft) < 0 | set fo+=t
 
 " Remove whitespace automatically
 autocmd BufWritePre * :%s/\s\+$//e
@@ -231,7 +234,8 @@ let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
 imap <expr><TAB> pumvisible() ? "\<C-n>" : (neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>")
 imap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
-imap <expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\<CR>\<Plug>AutoPairsReturn"
+imap <expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\<CR>"
+" imap <expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\<CR>\<Plug>AutoPairsReturn"
 " }}}
 
 " [fzf_] {{{
