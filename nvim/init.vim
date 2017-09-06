@@ -20,11 +20,6 @@ Plug 'mileszs/ack.vim'
 " https://github.com/jiangmiao/auto_pairs.vim
 Plug 'jiangmiao/auto-pairs'
 
-" [comfortable_motion_]
-" Plugin to search files recursively using ack
-" https://github.com/yuttie/comfortable-motion
-Plug 'yuttie/comfortable-motion.vim'
-
 " [bufferline_]
 " Plugin to list the buffers in vim
 " https://github.com/bling/vim-bufferline
@@ -75,6 +70,11 @@ Plug 'morhetz/gruvbox'
 " Plugin for footer colorizer
 " https://github.com/itchyny/lightline.vim
 Plug 'itchyny/lightline.vim'
+
+" [neoformat_]
+" Plugin for formatting code
+" https://github.com/sbdchd/neoformat
+Plug 'sbdchd/neoformat'
 
 " [neosnippet_]
 " Plugin for adding snippets
@@ -163,6 +163,10 @@ au! TabEnter * if index(tex_files, &ft) < 0 | set tw=79
 au! TabEnter * if index(tex_files, &ft) < 0 | set fo+=t
 au! TabNewEntered * if index(tex_files, &ft) < 0 | set tw=79
 au! TabNewEntered * if index(tex_files, &ft) < 0 | set fo+=t
+
+" Make launch/world files xml type
+au BufNewFile,BufRead,TabEnter,TabNewEntered *.launch set filetype=xml
+au BufNewFile,BufRead,TabEnter,TabNewEntered *.world set filetype=xml
 
 " Remove whitespace automatically
 autocmd BufWritePre * :%s/\s\+$//e
@@ -337,6 +341,10 @@ function! LightLineFilename()
 endfunction
 " }}}
 
+" [neoformat_] {{{
+nmap <F9> :Neoformat<CR>
+" }}}
+
 " [nerdcommenter_] {{{
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
@@ -409,12 +417,14 @@ vnoremap j gj
 vnoremap k gk
 
 " Add line without insert mode
-nnoremap <c-o> o<Esc>
-nnoremap <c-O> O<Esc>
+" Removing them after Ian's suggests for better remaps
+" nnoremap <c-o> o<Esc>
+" nnoremap <c-O> O<Esc>
 
 " Add space without insert mode
-nnoremap <c-a> a<space><Esc>
-nnoremap <c-i> i<space><Esc>
+" Removing them after Ian's suggests for better remaps
+" nnoremap <c-a> a<space><Esc>
+" nnoremap <c-i> i<space><Esc>
 
 " Move between splits
 nnoremap <c-h> <c-w><c-h>
