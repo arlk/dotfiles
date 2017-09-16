@@ -1,6 +1,6 @@
 [user]
 	email = lakshma2@illinois.edu
-	name = lakshma2
+	name = arlk
 [alias]
   la = "!git config -l | grep alias | cut -c 7-"
 
@@ -11,6 +11,7 @@
   cl = clone
   ci = commit
   co = checkout
+  cb = checkout -b
   br = branch
   diff = diff --word-diff
   dc = diff --cached
