@@ -386,9 +386,6 @@ let g:deoplete#omni#input_patterns.tex = '\\(?:'
 " Esc remapping
 inoremap jj <esc>
 
-" Select text written last time in insert mode
-nnoremap gV `[v`]
-
 " Turn off auto-indent while pasting
 set pastetoggle=<F2>
 
@@ -403,14 +400,6 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
-
-" Add line without insert mode
-nnoremap <c-o> o<Esc>
-nnoremap <c-O> O<Esc>
-
-" Add space without insert mode
-nnoremap <c-a> a<space><Esc>
-nnoremap <c-i> i<space><Esc>
 
 " Move between splits
 nnoremap <c-h> <c-w><c-h>
