@@ -108,7 +108,9 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # }}}
 
 # texlive {{{
-# export PATH=$PATH:/opt/texbin
+export PATH=/usr/local/texlive/2017/bin/x86_64-linux:$PATH
+export INFOPATH=$INFOPATH:/usr/local/texlive/2017/texmf-dist/doc/info
+export MANPATH=$MANPATH:/usr/local/texlive/2017/texmf-dist/doc/man
 # }}}
 
 # aliases {{{
