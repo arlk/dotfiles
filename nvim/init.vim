@@ -71,6 +71,11 @@ Plug 'morhetz/gruvbox'
 " https://github.com/itchyny/lightline.vim
 Plug 'itchyny/lightline.vim'
 
+" [markdown_]
+" Plugin for markdown syntaxing
+" https://github.com/plasticboy/vim-markdown
+Plug 'plasticboy/vim-markdown'
+
 " [neoformat_]
 " Plugin for formatting code
 " https://github.com/sbdchd/neoformat
@@ -126,9 +131,6 @@ Plug 'lervag/vimtex'
 " Plugin to help with word usuage
 " https://github.com/reedes/vim-wordy
 Plug 'reedes/vim-wordy'
-
-Plug 'sbdchd/neoformat'
-nmap <F9> :Neoformat<CR>
 " }}}
 
 " Plug End {{{
@@ -339,6 +341,11 @@ function! LightLineFilename()
        \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
        \ ('' != LightLineModified() ? ' ' . LightLineModified() : '')
 endfunction
+" }}}
+
+" [markdown_] {{{
+let g:vim_markdown_math = 1
+let g:vim_markdown_new_list_item_indent = 4
 " }}}
 
 " [neoformat_] {{{
