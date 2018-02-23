@@ -188,6 +188,8 @@ set expandtab
 set shiftwidth=2
 
 au FileType python setl ts=2 sts=2 sw=2 et
+au FileType julia setl ts=4 sts=4 sw=4 et
+au FileType latex setl ts=4 sts=4 sw=4 et
 " }}}
 
 " Vim Appearance and other settings {{{
