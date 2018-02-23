@@ -1,6 +1,6 @@
 [user]
 	email = lakshma2@illinois.edu
-	name = arlk
+	name = Arun Lakshmanan
 [alias]
   la = "!git config -l | grep alias | cut -c 7-"
 
@@ -21,3 +21,5 @@
   rhH = reset HEAD^ --hard
 [core]
   editor = 'nvim'
+[push]
+	default = simple
