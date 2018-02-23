@@ -4,12 +4,17 @@
 source ~/.zplug/init.zsh
 # }}}
 
+GEOMETRY_PROMPT_PLUGINS=(virtualenv git exec_time)
+GEOMETRY_COLOR_VIRTUALENV=yellow
+GEOMETRY_SYMBOL_PROMPT=""
+GEOMETRY_COLOR_DIR="blue"
+
 # zplug packages {{{
 zplug "plugins/git", from:oh-my-zsh
 
 zplug "lib/directories", from:oh-my-zsh
 
-zplug "arunlakshmanan/geometry"
+zplug "geometry-zsh/geometry"
 
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
@@ -129,5 +134,6 @@ alias tlmgr='env PATH="$PATH" tlmgr'
 #export DISTCC_HOSTS='localhost/8'
 #alias cdc="catkin build -p$(distcc -j) -j$(distcc -j) --no-jobserver"
 # }}}
+#
 
 # vim:foldmethod=marker:foldlevel=0
