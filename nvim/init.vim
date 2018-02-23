@@ -30,6 +30,13 @@ Plug 'bling/vim-bufferline'
 " https://github.com/Shougo/deoplete.nvim
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
+" [deoplete_julia_]
+" Plugin for julia support with neovim
+" https://github.com/JuliaEditorSupport/julia-vim
+Plug 'JuliaEditorSupport/julia-vim'
+Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
+Plug 'roxma/nvim-completion-manager'  " optional
+
 " [easymotion_]
 " Plugin to move faster in code
 " https://github.com/easymotion/vim-easymotion
@@ -283,6 +290,26 @@ command! -nargs=+ -complete=dir AgIn call SearchWithAgInDirectory(<f-args>)
 let g:gruvbox_italic=1
 colorscheme gruvbox
 set background=dark
+" }}}
+
+" [julia_] {{{
+" julia
+let g:default_julia_version = '0.6'
+
+" language server
+let g:LanguageClient_autoStart = 1
+let g:LanguageClient_serverCommands = {
+\   'julia': ['/usr/local/bin/julia', '--startup-file=no', '--history-file=no', '-e', '
+\       using LanguageServer;
+\       server = LanguageServer.LanguageServerInstance(STDIN, STDOUT, false);
+\       server.runlinter = true;
+\       run(server);
+\   '],
+\ }
+
+nnoremap <silent> L :call LanguageClient_textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 " }}}
 
 " [lightline_] {{{
