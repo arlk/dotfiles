@@ -30,13 +30,6 @@ Plug 'bling/vim-bufferline'
 " https://github.com/Shougo/deoplete.nvim
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
-" [deoplete_julia_]
-" Plugin for julia support with neovim
-" https://github.com/JuliaEditorSupport/julia-vim
-Plug 'JuliaEditorSupport/julia-vim'
-Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'}
-Plug 'roxma/nvim-completion-manager'  " optional
-
 " [easymotion_]
 " Plugin to move faster in code
 " https://github.com/easymotion/vim-easymotion
@@ -240,17 +233,21 @@ set foldmethod=indent
 " }}}
 
 " [deoplete_] [neosnippet_] [auto_pairs_] {{{
-let g:neosnippet#snippets_directory = [
-                \ "~/.config/nvim/snips/"
-                \ ]
-let g:AutoPairsMapCR=0
-let g:deoplete#auto_complete_start_length = 1
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#auto_complete_start_length = 1
 let g:deoplete#enable_smart_case = 1
-imap <expr><TAB> pumvisible() ? "\<C-n>" : (neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>")
-imap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
-imap <expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\<CR>"
-" imap <expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\<CR>\<Plug>AutoPairsReturn"
+let g:neosnippet#snippets_directory='~/.config/nvim/snips'
+let g:AutoPairsMapCR=0
+" Expand snippets on tab if snippets exists, otherwise do autocompletion
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\ : pumvisible() ? "\<C-n>" : "\<TAB>"
+" If popup window is visible do autocompletion from back
+imap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" Fix for jumping over placeholders for neosnippet
+smap <expr><TAB> neosnippet#jumpable() ?
+\ "\<Plug>(neosnippet_jump)"
+\: "\<TAB>"
 " }}}
 
 " [fzf_] {{{
@@ -292,26 +289,6 @@ command! -nargs=+ -complete=dir AgIn call SearchWithAgInDirectory(<f-args>)
 let g:gruvbox_italic=1
 colorscheme gruvbox
 set background=dark
-" }}}
-
-" [julia_] {{{
-" julia
-let g:default_julia_version = '0.6'
-
-" language server
-let g:LanguageClient_autoStart = 1
-let g:LanguageClient_serverCommands = {
-\   'julia': ['/usr/local/bin/julia', '--startup-file=no', '--history-file=no', '-e', '
-\       using LanguageServer;
-\       server = LanguageServer.LanguageServerInstance(STDIN, STDOUT, false);
-\       server.runlinter = true;
-\       run(server);
-\   '],
-\ }
-
-nnoremap <silent> L :call LanguageClient_textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 " }}}
 
 " [lightline_] {{{
