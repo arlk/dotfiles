@@ -49,7 +49,7 @@ git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggesti
 read -r -p "Make zsh default? [y/N] " response
 response=${response,,}
 if [[ $response =~ ^(yes|y)$ ]]; then
-  echo "/usr/local/bin/zsh" | sudo tee --append /etc/shells
+  echo $(which zsh) | sudo tee --append /etc/shells
   chsh -s $(which zsh)
 fi
 
