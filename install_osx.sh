@@ -13,7 +13,7 @@ if [ "$INSTALLED" == "" ]; then
 fi
 
 # Install some brew packages
-BREW_PACKAGES='python coreutils awk tmux zsh the_silver_searcher neovim xclip'
+BREW_PACKAGES='git python coreutils awk tmux zsh the_silver_searcher neovim xclip'
 for PKG in $BREW_PACKAGES
 do
   INSTALLED=$(brew ls --versions $PKG)
@@ -49,6 +49,7 @@ git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggesti
 read -r -p "Make zsh default? [y/N] " response
 response=${response,,}
 if [[ $response =~ ^(yes|y)$ ]]; then
+  echo "/usr/local/bin/zsh" | sudo tee --append /etc/shells
   chsh -s $(which zsh)
 fi
 
