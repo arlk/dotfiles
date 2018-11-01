@@ -143,7 +143,8 @@ function update_brew {
 
 function update_gems {
   echo "Updating gems"
-  sudo -H gem update -y
+  sudo -H gem clean
+  sudo -H gem update
 }
 
 # find out which user installed packages need updating (except pip: https://github.com/pypa/pip/issues/5599)
