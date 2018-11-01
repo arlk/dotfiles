@@ -100,10 +100,6 @@ source ~/.zplug/init.zsh
 # }}}
 
 # zplug packages {{{
-zplug "plugins/git", from:oh-my-zsh
-
-zplug "lib/directories", from:oh-my-zsh
-
 zplug "geometry-zsh/geometry"
 # zplug 'jedahan/geometry-hydrate', on:'geometry-zsh/geometry', defer:1
 
