@@ -64,12 +64,12 @@ if [[ $response =~ ^(yes|y)$ ]]; then
   sudo apt install -y -f
   sudo dpkg --configure -a
   rm -f hyper.deb
-fi
-read -r -p "Make hyper default? [y/N] " response
-response=${response,,}
-if [[ $response =~ ^(yes|y)$ ]]; then
-  gsettings set org.gnome.desktop.default-applications.terminal exec hyper
-  gsettings set org.gnome.desktop.default-applications.terminal exec-arg ''
+  read -r -p "Make hyper default? [y/N] " response
+  response=${response,,}
+  if [[ $response =~ ^(yes|y)$ ]]; then
+    gsettings set org.gnome.desktop.default-applications.terminal exec hyper
+    gsettings set org.gnome.desktop.default-applications.terminal exec-arg ''
+  fi
 fi
 
 # Finish setting up
