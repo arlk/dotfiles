@@ -48,7 +48,7 @@ Plug 'tpope/vim-fugitive'
 " [fzf_]
 " Plugin for fuzzy file finding
 " https://github.com/junegunn/fzf
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-bash --no-zsh' }
 Plug 'junegunn/fzf.vim'
 
 " [gitgutter_]

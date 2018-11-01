@@ -75,6 +75,24 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # useful functions {{{
 
+function update_apt {
+  echo "Updating apt"
+  sudo apt update -y
+  sudo apt upgrade -y
+  sudo apt autoremove
+}
+
+function update_brew {
+  echo "Updating brew"
+  brew update
+  brew upgrade
+}
+
+function update_gems {
+  echo "Updating gems"
+  sudo -H gem update -y
+}
+
 # find out which user installed packages need updating (except pip: https://github.com/pypa/pip/issues/5599)
 function update_pip {
   echo "Updating pip"
@@ -88,18 +106,28 @@ function update_pip {
   rm -f $PIP_PKG_FILE
 }
 
+function update_nvim {
+  echo "Updating nvim"
+  nvim +PlugClean +qall +silent
+  nvim +PlugUpdate +qall +silent
+  nvim +PlugUpgrade +qall +silent
+}
+
+function update_tmux {
+  echo "Updating tmux"
+  ~/.tmux/plugins/tpm/bin/update_plugins all
+}
+
 function update {
   if [ "$OSTYPE" = "Darwin" ]; then
-    echo "Updating brew"
-    brew update
-    brew upgrade
+    update_brew
   else
-    echo "Updating apt"
-    sudo apt update -y
-    sudo apt upgrade -y
-    sudo apt autoremove
+    update_apt
   fi
+  update_gems
   update_pip
+  update_nvim
+  update_tmux
 }
 
 # }}}
