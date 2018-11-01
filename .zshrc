@@ -130,4 +130,35 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # }}}
 
+# useful functions {{{
+
+# find out which user installed packages need updating (except pip: https://github.com/pypa/pip/issues/5599)
+function update_pip {
+  echo "Updating pip"
+  PIP_PKG_FILE=/tmp/pip_pkgs
+  pip list --user --outdated --format=freeze | grep -v 'pip' > $PIP_PKG_FILE
+  if [ -s $PIP_PKG_FILE ]; then
+    pip install --user -r $PIP_PKG_FILE --upgrade
+  else
+    echo "Already up-to-date"
+  fi
+  rm -f $PIP_PKG_FILE
+}
+
+function update {
+  if [ "$OSTYPE" = "Darwin" ]; then
+    echo "Updating brew"
+    brew update
+    brew upgrade
+  else
+    echo "Updating apt"
+    sudo apt update -y
+    sudo apt upgrade -y
+    sudo apt autoremove
+  fi
+  update_pip
+}
+
+# }}}
+
 # vim:foldmethod=marker:foldlevel=0
