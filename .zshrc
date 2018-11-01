@@ -54,7 +54,7 @@ setopt share_history     # share command history data
 # }}}
 
 # {{{ geometry
-GEOMETRY_PROMPT_PLUGINS=(git)
+GEOMETRY_PROMPT_PLUGINS=(virtualenv git)
 
 GEOMETRY_SYMBOL_PROMPT=""
 GEOMETRY_COLOR_PROMPT="cyan"
