@@ -1,4 +1,4 @@
-# Step dotfiles for Ubuntu or OSX
+# Install dotfiles for Ubuntu (> 18.04) or OSX (> High Sierra)
 
 1. Clone the repository in your home directory:
 
