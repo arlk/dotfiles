@@ -2,7 +2,7 @@
 ########################################################
 
 # Install some debian packages
-DEB_PACKAGES='git gawk curl python python-pip python3 python3-pip silversearcher-ag neovim python3-neovim ruby ruby-dev xclip zsh tmux'
+DEB_PACKAGES='git gawk curl python python-pip python3 python3-pip silversearcher-ag neovim ruby ruby-dev xclip zsh tmux'
 for PKG in $DEB_PACKAGES
 do
   INSTALLED=$(dpkg -l $PKG)
@@ -22,7 +22,6 @@ mkdir -p ~/.local/share/fonts
 (cd ~/.local/share/fonts && wget -q -O - https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/UbuntuMono.zip | busybox unzip -)
 gconftool-2 --set /apps/gnome-terminal/profiles/Default/use_system_font --type=boolean false
 gsettings set org.gnome.desktop.interface monospace-font-name 'UbuntuMono Nerd Font Mono 14'
-
 
 # Install colorls
 echo "Installing colorls..."
@@ -80,4 +79,4 @@ echo "Installing tmux plugins..."
  ~/.tmux/plugins/tpm/bin/install_plugins
 
 echo "Installing vim plugins..."
-nvim +PlugInstall
+nvim +PlugInstall +qall +silent
