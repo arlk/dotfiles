@@ -2,7 +2,7 @@
 ########################################################
 
 # Install some debian packages
-DEB_PACKAGES='git gawk curl python python-pip python3 python3-pip silversearcher-ag ruby ruby-dev xclip zsh tmux'
+DEB_PACKAGES='git gawk curl python python-pip python3 python3-pip silversearcher-ag ruby ruby-dev ruby-all-dev xclip zsh tmux'
 for PKG in $DEB_PACKAGES
 do
   INSTALLED=$(dpkg -l $PKG)
