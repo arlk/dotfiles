@@ -2,7 +2,7 @@
 ########################################################
 
 # Install some debian packages
-DEB_PACKAGES='git gawk curl python python-pip python3 python3-pip silversearcher-ag neovim ruby ruby-dev xclip zsh tmux'
+DEB_PACKAGES='git gawk curl python python-pip python3 python3-pip silversearcher-ag ruby ruby-dev xclip zsh tmux'
 for PKG in $DEB_PACKAGES
 do
   INSTALLED=$(dpkg -l $PKG)
@@ -13,7 +13,10 @@ do
 done
 
 # Use python3 for neovim
-echo "Upgrading neovim..."
+echo "Install neovim..."
+sudo apt-add-repository ppa:neovim-ppa/stable
+sudo apt update
+sudo apt install neovim
 python3 -m pip install --user --upgrade neovim
 
 # Install colorls
