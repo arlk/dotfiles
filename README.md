@@ -1,4 +1,4 @@
-# Step dotfiles for Ubuntu or OSX
+# Install dotfiles for Intel drones (Ubuntu 16.04)
 
 1. Clone the repository in your home directory:
 
