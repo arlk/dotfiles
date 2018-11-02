@@ -193,4 +193,13 @@ function update {
 
 # }}}
 
+# ros {{{
+export ROS_DISTRO=kinetic
+export ROS_PACKAGE_PATH=/opt/ros/$ROS_DISTRO/share:/opt/ros/$ROS_DISTRO/stacks
+export ROS_IP=$(hostname).local
+export ROS_MASTER_URI=http://$(hostname).local:11311
+source /opt/ros/$ROS_DISTRO/setup.zsh
+source $HOME/ws/devel/setup.zsh
+# }}}
+
 # vim:foldmethod=marker:foldlevel=0

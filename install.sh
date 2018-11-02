@@ -16,13 +16,6 @@ done
 echo "Upgrading neovim..."
 python3 -m pip install --user --upgrade neovim
 
-# Install a patched nerd font
-echo "Installing nerd fonts..."
-mkdir -p ~/.local/share/fonts
-(cd ~/.local/share/fonts && wget -q -O - https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/UbuntuMono.zip | busybox unzip -)
-gconftool-2 --set /apps/gnome-terminal/profiles/Default/use_system_font --type=boolean false
-gsettings set org.gnome.desktop.interface monospace-font-name 'UbuntuMono Nerd Font Mono 14'
-
 # Install colorls
 echo "Installing colorls..."
 sudo gem install colorls
@@ -51,25 +44,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "Installing vim-plug..."
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-# Install Hyper
-read -r -p "Install hyper.js? [y/N] " response
-response=${response,,}
-if [[ $response =~ ^(yes|y)$ ]]; then
-  echo "Installing hyper.js..."
-  wget -q -O hyper.deb "https://releases.hyper.is/download/deb"
-  sudo apt clean
-  sudo dpkg -i hyper.deb
-  sudo apt install -y -f
-  sudo dpkg --configure -a
-  rm -f hyper.deb
-  read -r -p "Make hyper default? [y/N] " response
-  response=${response,,}
-  if [[ $response =~ ^(yes|y)$ ]]; then
-    gsettings set org.gnome.desktop.default-applications.terminal exec hyper
-    gsettings set org.gnome.desktop.default-applications.terminal exec-arg ''
-  fi
-fi
 
 # Finish setting up
 echo "Creating symlinks..."
