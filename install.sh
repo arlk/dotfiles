@@ -12,11 +12,14 @@ do
   fi
 done
 
+INSTALLED=$(dpkg -l neovim)
+if [ "$INSTALLED" == "" ]; then
+  sudo apt-add-repository ppa:neovim-ppa/stable
+  sudo apt update
+  echo "Installing neovim ..."
+  sudo apt install neovim -y
+fi
 # Use python3 for neovim
-echo "Install neovim..."
-sudo apt-add-repository ppa:neovim-ppa/stable
-sudo apt update
-sudo apt install neovim
 python3 -m pip install --user --upgrade neovim
 
 # Install colorls
