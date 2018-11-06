@@ -194,6 +194,7 @@ function update {
 # }}}
 
 # ros {{{
+export HOSTNAME=$(hostname)
 export ROS_DISTRO=kinetic
 export ROS_PACKAGE_PATH=/opt/ros/$ROS_DISTRO/share:/opt/ros/$ROS_DISTRO/stacks
 export ROS_IP=$(hostname).local
