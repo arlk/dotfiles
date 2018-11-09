@@ -66,6 +66,11 @@ Plug 'rhysd/vim-grammarous'
 " https://github.com/morhetz/gruvbox
 Plug 'morhetz/gruvbox'
 
+" [julia_]
+" Plugin to help with word usuage
+" https://github.com/JuliaEditorSupport/julia-vim
+Plug 'JuliaEditorSupport/julia-vim'
+
 " [lightline_]
 " Plugin for footer colorizer
 " https://github.com/itchyny/lightline.vim
