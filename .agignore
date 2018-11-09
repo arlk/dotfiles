@@ -8,3 +8,6 @@
 slprj/
 hdlsrc/
 *grt_rtw/
+
+Applications/
+Library/
