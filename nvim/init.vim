@@ -239,8 +239,8 @@ set foldmethod=indent
 
 " [deoplete_] [neosnippet_] [auto_pairs_] {{{
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_start_length = 1
-let g:deoplete#enable_smart_case = 1
+let g:deoplete#custom#auto_complete_start_length = 1
+let g:deoplete#custom#enable_smart_case = 1
 let g:neosnippet#snippets_directory='~/.config/nvim/snips'
 let g:AutoPairsMapCR=0
 " Expand snippets on tab if snippets exists, otherwise do autocompletion
@@ -397,10 +397,12 @@ nmap <F8> :TagbarToggle<CR>
 " }}}
 
 " [tex_] {{{
-if !exists('g:deoplete#omni#input_patterns')
-    let g:deoplete#omni#input_patterns = {}
+let g:tex_flavor = 'latex'
+
+if !exists('g:deoplete#custom#omni#input_patterns')
+    let g:deoplete#custom#omni#input_patterns = {}
 endif
-let g:deoplete#omni#input_patterns.tex = '\\(?:'
+let g:deoplete#custom#omni#input_patterns.tex = '\\(?:'
       \ .  '\w*cite\w*(?:\s*\[[^]]*\]){0,2}\s*{[^}]*'
       \ . '|\w*ref(?:\s*\{[^}]*|range\s*\{[^,}]*(?:}{)?)'
       \ . '|hyperref\s*\[[^]]*'
